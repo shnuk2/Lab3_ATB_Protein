@@ -1,0 +1,503 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,800;1,6..12,300;1,6..12,800&family=Nunito:ital,wght@0,300;0,800;0,900;0,1000;1,300;1,800&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,700;1,800;1,900&display=swap">
+</head>
+<body>
+    <section class="delivery">
+    <div class="delivery__info-text">
+        <!--<p id="delivery-info" class="delivery__title">- DELIVERY -</p>-->
+        <h2 class="delivery__heading">Delivery &amp; Payment</h2>
+        <span class="delivery__first-text-block">
+            <span class="delivery__description">We promise just fast delivery and high quality of plush toys. </span>
+
+        </span>
+        <ul class="delivery__list">
+            <li class="delivery__item">Subject to ordering before 18:00 (on Sun until 15:00);</li>
+            <li class="delivery__item">It is possible to change the delivery time the next day after the holidays;</li>
+            <li class="delivery__item">Delivery time may vary for offices;</li>
+            <li class="delivery__item">Intervals are subject to change due to difficult weather and traffic conditions;
+            </li>
+            <li class="delivery__item">Delivery outside the city may have a number of restrictions — check with the
+                manager.</li>
+        </ul>
+        <div class="image-with-text">
+
+        </div>
+
+    </div>
+    <div class="delivery__form">
+        <form id="add-form" class="delivery__form-form" action="https://formspree.io/f/xzbnbveq" method="POST">
+            <div class="input-box">
+                <input type="text" class="input-field" name="full-name" placeholder="Full name*"><br>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" name="phone-number" placeholder="Phone number*"><br>
+            </div>
+            <div class="input-box">
+                <input type="text" class="input-field" name="adress" placeholder="Adress*"><br>
+            </div>
+            <!--
+            <div class="input-box">
+                <select id="choices" name="choices" class="select-text">
+                    <option value="" disabled="" selected="" hidden="">Water type*</option>
+                    <option value="option1">Bottled Water</option>
+                    <option value="option2">Bulk Water</option>
+                    <option value="option3">Coffee Supplies</option>
+                    <option value="option4">Private Lable</option>
+                </select><br>
+            </div>
+            -->
+
+            <div class="input-box">
+                <input type="date" class="select-date" name="date" value="2023-01-01"><br>
+            </div>
+            <a href="{% url 'index'%}" class="btn" >
+                        CHECKOUT
+                    </a>
+            <p id="my-form-status"></p>
+        </form>
+    </div>
+</section>
+</body>
+</html>
+
+
+<style>
+
+/*
+    .body__contacts {
+    background-color: #f1f6fb;
+}
+*/
+
+/*
+.header__contacts {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #21b6ff;
+    height: 223px;
+}
+*/
+
+.header__contacts .text {
+    color: #ffffff;
+    font-size: 38px;
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    font-weight: 800;
+}
+
+.delivery {
+    padding-left: 24px;
+    padding-right: 24px;
+    max-width: 1200px;
+    margin: auto;
+    padding-top: 90px;
+    padding-bottom: 30px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+}
+
+.delivery__info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.delivery__title {
+    color: #21b6ff;
+}
+
+.delivery__heading {
+    color: #2EB872;
+    font-size: 38px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.delivery__description {
+    color: #5c607c;
+    font-size: 19px;
+    font-weight: 600;
+    font-family: 'Work Sans', sans-serif;
+    padding-top: 15px;
+    padding-bottom: 0;
+    line-height: 1.5;
+}
+
+.delivery__description-time,
+.delivery__discount-item {
+    color: #21b6ff;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    padding: 0;
+}
+
+.delivery__description-star {
+    color: #78ee4a;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    padding: 0;
+    margin-left: 5px
+}
+
+.delivery__first-text-block {
+    display: block;
+}
+
+.image-with-text {
+    display: flex;
+    align-items: center;
+}
+
+.delivery__discount-image {
+    width: 80px;
+}
+
+.delivery__discount {
+    color: #5c607c;
+    font-size: 19px;
+    font-weight: 400;
+    font-family: 'Work Sans', sans-serif;
+    line-height: 1.5;
+}
+
+.delivery__discount-info {
+    list-style: none;
+    padding-top: 15px;
+}
+
+.delivery__discount-info-item::before {
+    content: "*";
+    color: #20b6ff;
+    margin-right: 3px;
+    font-size: 1em;
+    font-family: 'Work Sans';
+    font-style: italic;
+    vertical-align: middle;
+}
+
+.delivery__discount-info-item {
+    font-family: 'Work Sans';
+    font-style: italic;
+    font-weight: 400;
+
+    font-size: 15px;
+}
+
+.delivery__list {
+    list-style: none;
+}
+
+.delivery__item {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+
+    color: #5c607c;
+}
+
+.delivery__item::before {
+    content: "•";
+    color: #2EB872;
+    margin-right: 8px;
+    font-size: 1.5em;
+    vertical-align: middle;
+}
+
+.delivery__form {
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    padding: 60px 0 0 0;
+     margin-top: 60px;
+}
+
+.delivery__form form {
+
+    flex-direction: column;
+    margin: 50px 50px 20px 50px;
+    width: 80%;
+}
+
+.error .input-field,
+.error .select-text {
+    border-color: rgb(255, 0, 0);
+    margin-bottom: 5px;
+}
+.error .select-date {
+    border-color: rgb(255, 0, 0);
+    margin-bottom: 5px;
+}
+
+/*
+.error-label {
+    display: block;
+    color: #21b6ff;
+    margin-bottom: 10px;
+    text-align: center;
+}
+*/
+
+.input-field,
+.select-date,
+.delivery__form select {
+    margin-bottom: 30px;
+    padding: 11px 22px 11px 22px;
+    border: 1px solid #f1f6fb;
+    border-radius: 20px;
+    border-color:#f1f6fb;
+    background-color: #f1f6fb;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    width: 100%;
+    color: #6f85b5;
+}
+
+.select-text,
+.delivery__form input[type="text"]::placeholder {
+    color: #6f85b5;
+}
+/*
+.btn {
+    background-color: #2EB872;
+    color: #ffffff;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px 20px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 25px;
+}
+*/
+
+
+.btn {
+    background-color: #2EB872;
+    color: #ffffff;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 25px;
+    display: inline-block;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: #26a563;
+}
+.delivery__form form input:focus {
+    outline-color: #3498db;
+}
+/*
+.btn:hover {
+    background-color: #002579;
+}
+*/
+
+.info__card {
+    display: grid;
+    grid-gap: 10px;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.info__card svg {
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    display: block;
+}
+
+.info__card .card__title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    color: #002579;
+}
+
+.info__card .card__text {
+    font-size: 14px;
+    color: #5c607c;
+}
+
+.info__card-svg {
+    color: #5c607c;
+}
+
+.delivery__location {
+    margin-top: 100px;
+    position: relative;
+    width: 100%;
+}
+
+.delivery__location-map {
+    width: 100%;
+    height: 740px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+}
+
+.delivery__location-overlay {
+    position: absolute;
+    top: 39%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 2;
+}
+
+.delivery__location-overlay-title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    color:#002579;
+}
+
+.delivery__location-address {
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    color:#002579;
+}
+
+@media screen and (min-width: 768px) {
+    .header__contacts .text {
+        font-size: 55px;
+    }
+
+    .delivery {
+        grid-template-columns: 1fr 1fr;
+        padding-top: 105px;
+    }
+
+    .delivery__heading {
+        font-size: 46px;
+    }
+
+    .header__contacts {
+        height: 262px;
+    }
+
+    .delivery__info-text {
+        grid-column: 1 / span 1;
+    }
+
+    .delivery__form {
+        grid-column: 2 / span 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+        padding: 60px 0 0 0;
+        vertical-align: baseline;
+    }
+    .delivery__form form {
+        margin: 0;
+        padding: 0;
+        vertical-align: baseline;
+    }
+
+    .info__card {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .info__card .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .info__card svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .info__card .card__title {
+        font-size: 24px;
+    }
+
+    .delivery__location-map {
+        height: 750px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .delivery {
+        padding-top: 105px;
+    }
+
+    .delivery__heading {
+        font-size: 55px;
+    }
+
+    .info__card .card__title {
+        font-size: 26px;
+    }
+
+    .delivery__location-map {
+        height: 760px;
+    }
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.none {
+    display: none !important;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container-water {
+    max-width: 1200px;
+    margin: auto;
+}
+</style>

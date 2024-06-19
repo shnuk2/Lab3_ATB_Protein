@@ -1,0 +1,63 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+    <!-- Page Header Start -->
+    <div
+      class="container-fluid header-bg py-5 mb-5 wow fadeIn"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <h1 class="display-4 text-white mb-3 animated slideInDown">Services</h1>
+      </div>
+    </div>
+    <!-- Page Header End -->
+
+    <!-- Service Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="col-lg-6">
+        <p><span class="text-primary me-2">#</span>Our Services</p>
+        <h1 class="display-5 mb-0">
+          Special Services For
+          <span class="text-primary">Zoofari</span> Customers
+        </h1>
+      </div>
+      <div class="col-lg-6">
+        <div class="bg-primary h-100 d-flex align-items-center py-4 px-4 px-sm-5">
+          <i class="fa fa-3x fa-mobile-alt text-white"></i>
+          <div class="ms-4">
+            <p class="text-white mb-0">Call for more info</p>
+            <h2 class="text-white mb-0">+012 345 6789</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row gy-5 gx-4">
+      <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+        <img class="img-fluid mb-3" src="{%static 'img/icon/icon-2.png'%}" alt="Icon" />
+        <h5 class="mb-3">Plushie Personal Shopper</h5>
+        <span>Need help finding the perfect plushie? Our dedicated personal shoppers are here to assist you in selecting the ideal plushie based on your preferences and needs.</span>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+        <img class="img-fluid mb-3" src="{%static 'img/icon/icon-3.png'%}" alt="Icon" />
+        <h5 class="mb-3">Plushie Loyalty Program</h5>
+        <span>Join our loyalty program and earn points with every plushie purchase. Redeem your points for discounts, exclusive gifts, or even free plushies!</span>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+        <img class="img-fluid mb-3" src="{%static  'img/icon/icon-4.png'%}" alt="Icon" />
+        <h5 class="mb-3">Plushie Gift Wrapping</h5>
+        <span> Make your plushie gift extra special with our complimentary gift wrapping service. Choose from a variety of adorable wrapping paper designs to suit any occasion.</span>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+        <img class="img-fluid mb-3" src="{%static 'img/icon/icon-5.png'%}" alt="Icon" />
+        <h5 class="mb-3">Plushie Repair Service</h5>
+        <span> Accidents happen! If your plushie gets damaged, don't worry. Take advantage of our plushie repair service, where our skilled artisans will lovingly restore your plushie to its former glory.</span>
+      </div>
+    </div>
+  </div>
+</div>
+    <!-- Service End -->
+{% endblock %}

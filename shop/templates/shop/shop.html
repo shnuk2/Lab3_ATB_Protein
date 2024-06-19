@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!-- Search and Cart Section Start -->
+<div class="container-fluid bg-white py-3 text-center">
+    <div class="row justify-content-center align-items-center">
+        <div class="col-md-8">
+            <div class="d-flex justify-content-center align-items-center">
+                <form class="d-flex me-3" action="{% url 'shop' %}" method="get">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="query">
+                    <button class="btn btn-outline-primary" type="submit">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+                <a class="btn btn-outline-primary" href="{% url 'cart' %}">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="badge bg-success">{{ cart_items_count }}</span> <!-- Example for showing cart item count -->
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Search and Cart Section End -->
+
+
+
+
+    <!-- Start Content -->
+    <div class="container py-5">
+        <div class="row">
+
+
+                <div class="row">
+                    {%for product in products%}
+                    <div class="col-md-4">
+                        <div class="card mb-4 product-wap rounded-0">
+                            <div class="card rounded-0">
+                                <img class="card-img rounded-0 img-fluid" src='{{product.image.url}}'>
+                                <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                                    <ul class="list-unstyled">
+                                        <li><a class="btn btn-success text-white mt-2" href="{% url 'shop_single' product.id%}"><i class="far fa-eye"></i></a></li>
+                                        <li><a class="btn btn-success text-white mt-2" href="{% url 'add_cart' product.id %}"><i class="fas fa-cart-plus"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <a href="{% url 'shop_single' product.id%}" class="h3 text-decoration-none">{{product.name}}</a>
+                                <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+
+                                    <li class="pt-2">
+                                        <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                        <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                                    </li>
+                                </ul>
+                                <ul class="list-unstyled d-flex justify-content-center mb-1">
+                                    <li>
+                                        {% for _ in "x"|rjust:product.rating %}
+                                            <i class="text-warning fa fa-star"></i>
+                                        {% endfor %}
+                                    </li>
+                                </ul>
+                                <p class="text-center mb-0">${{product.price}}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div div="row">
+                    <ul class="pagination pagination-lg justify-content-end">
+
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Search and Cart Section End -->
+
+
+
+<!-- End Content -->
+{% endblock %}
