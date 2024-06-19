@@ -1,0 +1,481 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<!-- Header Start -->
+    <div class="container-fluid bg-dark p-0 mb-5">
+      <div class="row g-0 flex-column-reverse flex-lg-row">
+        <div class="col-lg-6 p-0 wow fadeIn" data-wow-delay="0.1s">
+          <div
+            class="header-bg h-100 d-flex flex-column justify-content-center p-5"
+          >
+            <h1 class="display-4 text-light mb-5">
+              Buy Plushies
+            </h1>
+            <div class="d-flex align-items-center pt-4 animated slideInDown">
+              <a href="" class="btn btn-primary py-sm-3 px-3 px-sm-5 me-5"
+                >Read More</a
+              >
+              <button
+                type="button"
+                class="btn-play"
+                data-bs-toggle="modal"
+                data-src="https://www.youtube.com/watch?v=b4XpMTUlorc"
+                data-bs-target="#videoModal"
+              >
+                <span></span>
+              </button>
+              <h6 class="text-white m-0 ms-4 d-none d-sm-block">Watch Video</h6>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+          <div class="owl-carousel header-carousel">
+            <div class="owl-carousel-item">
+              <img class="img-fluid" src="{%static  'img/carousel-1.jpg'%}" alt="" />
+            </div>
+            <div class="owl-carousel-item">
+              <img class="img-fluid" src="{%static  'img/carousel-2.jpg'%}" alt="" />
+            </div>
+            <div class="owl-carousel-item">
+              <img class="img-fluid" src="{%static  'img/carousel-3.jpg'%}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Header End -->
+    <!-- Video Modal Start -->
+    <div
+      class="modal modal-video fade"
+      id="videoModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content rounded-0">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- 16:9 aspect ratio -->
+            <div class="ratio ratio-16x9">
+              <iframe
+                class="embed-responsive-item"
+                src=""
+                id="video"
+                allowfullscreen
+                allowscriptaccess="always"
+                allow="autoplay"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Video Modal End -->
+
+    <!-- About Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div class="row g-5">
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+            <p><span class="text-primary me-2">#</span>Welcome To Zoofari</p>
+            <h1 class="display-5 mb-4">
+              Why You Should Buy
+              <span class="text-primary">Zoofari</span> Plushies!
+            </h1>
+            <p class="mb-4">
+              Discover happiness with Zoofari's cute animal plushies!
+
+            </p>
+            <h5 class="mb-3">
+              <i class="far fa-check-circle text-primary me-3"></i>Irresistible Charm: Our plushies are irresistibly cute and huggable, bringing joy to all ages.
+            </h5>
+            <h5 class="mb-3">
+              <i class="far fa-check-circle text-primary me-3"></i>Top Quality: Crafted with premium materials for lasting comfort and durability.
+            </h5>
+            <h5 class="mb-3">
+              <i class="far fa-check-circle text-primary me-3"></i>Perfect Gifts: Ideal for birthdays and holidays, adding a cozy touch to any space.
+            </h5>
+            <h5 class="mb-3">
+              <i class="far fa-check-circle text-primary me-3"></i>Educational Fun: Learn while you play with fascinating animal facts included.
+            </h5>
+            <a class="btn btn-primary py-3 px-5 mt-3" href="{% url 'shop'%}">Shop Plushies</a>
+          </div>
+          <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="img-border">
+              <img class="img-fluid" src="{%static 'img/about.jpg'%}" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- About End -->
+
+    <!-- Facts Start -->
+    <div
+      class="container-xxl bg-primary facts my-5 py-5 wow fadeInUp"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <div class="row g-4">
+          <div
+            class="col-md-6 col-lg-3 text-center wow fadeIn"
+            data-wow-delay="0.1s"
+          >
+            <i class="fa fa-paw fa-3x text-primary mb-3"></i>
+            <h1 class="text-white mb-2" data-toggle="counter-up">289000</h1>
+            <p class="text-white mb-0">The total number of plushies</p>
+          </div>
+          <div
+            class="col-md-6 col-lg-3 text-center wow fadeIn"
+            data-wow-delay="0.3s"
+          >
+            <i class="fa fa-users fa-3x text-primary mb-3"></i>
+            <h1 class="text-white mb-2" data-toggle="counter-up">20</h1>
+            <p class="text-white mb-0">Toy Lines</p>
+          </div>
+          <div
+            class="col-md-6 col-lg-3 text-center wow fadeIn"
+            data-wow-delay="0.5s"
+          >
+            <i class="fa fa-certificate fa-3x text-primary mb-3"></i>
+            <h1 class="text-white mb-2" data-toggle="counter-up">250</h1>
+            <p class="text-white mb-0">Store's worldwide</p>
+          </div>
+          <div
+            class="col-md-6 col-lg-3 text-center wow fadeIn"
+            data-wow-delay="0.7s"
+          >
+            <i class="fa fa-shield-alt fa-3x text-primary mb-3"></i>
+            <h1 class="text-white mb-2" data-toggle="counter-up">1500000</h1>
+            <p class="text-white mb-0">Workers!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Facts End -->
+
+   <!-- Service Start -->
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+      <div class="col-lg-6">
+        <p><span class="text-primary me-2">#</span>Our Services</p>
+        <h1 class="display-5 mb-0">
+          Special Services For
+          <span class="text-primary">Zoofari</span> Customers
+        </h1>
+      </div>
+      <div class="col-lg-6">
+        <div class="bg-primary h-100 d-flex align-items-center py-4 px-4 px-sm-5">
+          <i class="fa fa-3x fa-mobile-alt text-white"></i>
+          <div class="ms-4">
+            <p class="text-white mb-0">Call for more info</p>
+            <h2 class="text-white mb-0">+012 345 6789</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row gy-5 gx-4">
+      <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
+        <img class="img-fluid mb-3" src="{%static 'img/icon/icon-2.png'%}" alt="Icon" />
+        <h5 class="mb-3">Plushie Personal Shopper</h5>
+        <span>Need help finding the perfect plushie? Our dedicated personal shoppers are here to assist you in selecting the ideal plushie based on your preferences and needs.</span>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.3s">
+        <img class="img-fluid mb-3" src="{%static 'img/icon/icon-3.png'%}" alt="Icon" />
+        <h5 class="mb-3">Plushie Loyalty Program</h5>
+        <span>Join our loyalty program and earn points with every plushie purchase. Redeem your points for discounts, exclusive gifts, or even free plushies!</span>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.5s">
+        <img class="img-fluid mb-3" src="{%static  'img/icon/icon-4.png'%}" alt="Icon" />
+        <h5 class="mb-3">Plushie Gift Wrapping</h5>
+        <span> Make your plushie gift extra special with our complimentary gift wrapping service. Choose from a variety of adorable wrapping paper designs to suit any occasion.</span>
+      </div>
+      <div class="col-lg-3 col-md-4 col-sm-6 wow fadeInUp" data-wow-delay="0.7s">
+        <img class="img-fluid mb-3" src="{%static 'img/icon/icon-5.png'%}" alt="Icon" />
+        <h5 class="mb-3">Plushie Repair Service</h5>
+        <span> Accidents happen! If your plushie gets damaged, don't worry. Take advantage of our plushie repair service, where our skilled artisans will lovingly restore your plushie to its former glory.</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    <!-- Animal Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <div
+          class="row g-5 mb-5 align-items-end wow fadeInUp"
+          data-wow-delay="0.1s"
+        >
+          <div class="col-lg-6">
+            <p><span class="text-primary me-2">#</span>Our Animals</p>
+            <h1 class="display-5 mb-0">
+              Let`s See Our <span class="text-primary">Zoofari</span> Awesome
+              Plushies
+            </h1>
+          </div>
+          <div class="col-lg-6 text-lg-end">
+            <a class="btn btn-primary py-3 px-5" href="{% url 'shop'%}"
+              >Explore More Plushies</a
+            >
+          </div>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="row g-4">
+              <div class="col-12">
+                <a
+                  class="animal-item"
+                  href="{% static  'img/animal-md-1.jpg' %}"
+                  data-lightbox="animal"
+                >
+                  <div class="position-relative">
+                    <img class="img-fluid" src="{%static 'img/animal-md-1.jpg'%}" alt="" />
+                    <div class="animal-text p-4">
+                      <p class="text-white small text-uppercase mb-0">Animal</p>
+                      <h5 class="text-white mb-0">Mister Owl</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-12">
+                <a
+                  class="animal-item"
+                  href="{% static 'img/animal-lg-1.jpg'%}"
+                  data-lightbox="animal"
+                >
+                  <div class="position-relative">
+                    <img class="img-fluid" src="{%static 'img/animal-lg-1.jpg'%}" alt="" />
+                    <div class="animal-text p-4">
+                      <p class="text-white small text-uppercase mb-0">Animal</p>
+                      <h5 class="text-white mb-0">Dinosaura</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+            <div class="row g-4">
+              <div class="col-12">
+                <a
+                  class="animal-item"
+                  href="{% static 'img/animal-lg-2.jpg'%}"
+                  data-lightbox="animal"
+                >
+                  <div class="position-relative">
+                    <img class="img-fluid" src="{%static 'img/animal-lg-2.jpg'%}" alt="" />
+                    <div class="animal-text p-4">
+                      <p class="text-white small text-uppercase mb-0">Animal</p>
+                      <h5 class="text-white mb-0">Senior Cot</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-12">
+                <a
+                  class="animal-item"
+                  href="{% static 'img/animal-md-2.jpg' %}"
+                  data-lightbox="animal"
+                >
+                  <div class="position-relative">
+                    <img class="img-fluid" src="{%static 'img/animal-md-2.jpg'%}" alt="" />
+                    <div class="animal-text p-4">
+                      <p class="text-white small text-uppercase mb-0">Animal</p>
+                      <h5 class="text-white mb-0">Hatiko</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+            <div class="row g-4">
+              <div class="col-12">
+                <a
+                  class="animal-item"
+                  href="{% static  'img/animal-md-3.jpg' %}"
+                  data-lightbox="animal"
+                >
+                  <div class="position-relative">
+                    <img class="img-fluid" src="{%static 'img/animal-md-3.jpg'%}" alt="" />
+                    <div class="animal-text p-4">
+                      <p class="text-white small text-uppercase mb-0">Animal</p>
+                      <h5 class="text-white mb-0">Jumbo</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div class="col-12">
+                <a
+                  class="animal-item"
+                  href="{% static 'img/animal-lg-3.jpg'%}"
+                  data-lightbox="animal"
+                >
+                  <div class="position-relative">
+                    <img class="img-fluid" src="{%static 'img/animal-lg-3.jpg'%}" alt="" />
+                    <div class="animal-text p-4">
+                      <p class="text-white small text-uppercase mb-0">Animal</p>
+                      <h5 class="text-white mb-0">Knoot Knoot</h5>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Animal End -->
+
+    <!-- Visiting Hours Start -->
+    <div
+      class="container-xxl bg-primary visiting-hours my-5 py-5 wow fadeInUp"
+      data-wow-delay="0.1s"
+    >
+      <div class="container py-5">
+        <div class="row g-5">
+          <div class="col-md-6 wow fadeIn" data-wow-delay="0.3s">
+            <h1 class="display-6 text-white mb-5">Visiting Hours</h1>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <span>Monday</span>
+                <span>9:00AM - 6:00PM</span>
+              </li>
+              <li class="list-group-item">
+                <span>Tuesday</span>
+                <span>9:00AM - 6:00PM</span>
+              </li>
+              <li class="list-group-item">
+                <span>Wednesday</span>
+                <span>9:00AM - 6:00PM</span>
+              </li>
+              <li class="list-group-item">
+                <span>Thursday</span>
+                <span>9:00AM - 6:00PM</span>
+              </li>
+              <li class="list-group-item">
+                <span>Friday</span>
+                <span>9:00AM - 6:00PM</span>
+              </li>
+              <li class="list-group-item">
+                <span>Saturday</span>
+                <span>9:00AM - 6:00PM</span>
+              </li>
+              <li class="list-group-item">
+                <span>Sunday</span>
+                <span>Closed</span>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-6 text-light wow fadeIn" data-wow-delay="0.5s">
+            <h1 class="display-6 text-white mb-5">Contact Info</h1>
+            <table class="table">
+              <tbody>
+                <tr>
+                  <td>Office</td>
+                  <td>Zoological Street, 1, Kyiv, 02000</td>
+                </tr>
+                <tr>
+                  <td>Zoo</td>
+                  <td>Zoological Street, 1, Kyiv, 02000</td>
+                </tr>
+                <tr>
+                  <td>Support</td>
+                  <td>
+                    <p class="mb-2">+012 345 6789</p>
+                    <p class="mb-0">support@example.com</p>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Visiting Hours End -->
+
+
+
+    <!-- Testimonial Start -->
+    <div class="container-xxl py-5">
+      <div class="container">
+        <h1
+          class="display-5 text-center mb-5 wow fadeInUp"
+          data-wow-delay="0.1s"
+        >
+          Our Clients Say!
+        </h1>
+        <div
+          class="owl-carousel testimonial-carousel wow fadeInUp"
+          data-wow-delay="0.1s"
+        >
+          <div class="testimonial-item text-center">
+            <img
+              class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4"
+              src="{%static 'img/testimonial-1.jpg'%}"
+              style="width: 100px; height: 100px"
+            />
+            <div class="testimonial-text rounded text-center p-4">
+              <p>
+                I recently purchased a plushie from ZooFari, and I couldn't be happier! The selection was fantastic, and the quality of the plushie exceeded my expectations.
+                It's so soft and cuddly, perfect for snuggling up with. The customer service was also excellent, with friendly staff who were happy to assist me in finding the perfect plushie.
+                I highly recommend ZooFari to anyone looking for high-quality plushies.
+              </p>
+              <h5 class="mb-1">Absolutely Adorable</h5>
+
+            </div>
+          </div>
+          <div class="testimonial-item text-center">
+            <img
+              class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4"
+              src="{%static 'img/testimonial-2.jpg'%}"
+              style="width: 100px; height: 100px"
+            />
+            <div class="testimonial-text rounded text-center p-4">
+              <p>
+                ZooFari has an incredible selection of plushies to choose from!
+                Whether you're looking for cute animals, mythical creatures, or popular characters, they have it all.
+                I was amazed by the variety of options available, and I had a blast browsing through their collection.
+                The plushie I purchased was of excellent quality, and it arrived promptly.
+                I'll definitely be coming back to ZooFari for all my plushie needs!
+              </p>
+              <h5 class="mb-1">Amazing Variety!</h5>
+
+            </div>
+          </div>
+          <div class="testimonial-item text-center">
+            <img
+              class="img-fluid rounded-circle border border-2 p-2 mx-auto mb-4"
+              src="{%static 'img/testimonial-3.jpg'%}"
+              style="width: 100px; height: 100px"
+            />
+            <div class="testimonial-text rounded text-center p-4">
+              <p>
+                I had a wonderful experience shopping at ZooFari for plushies.
+                The website was easy to navigate, making it simple to find the perfect plushie for my collection.
+                The checkout process was smooth, and my order arrived quickly and well-packaged.
+                The plushie itself was even cuter in person than it was online, and I was impressed by the attention to detail and craftsmanship.
+                Overall, I had a great shopping experience with ZooFari and would highly recommend it to others!
+              </p>
+              <h5 class="mb-1">Great Shopping Experience!</h5>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+{% endblock %}
