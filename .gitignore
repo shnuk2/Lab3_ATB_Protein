@@ -1,0 +1,11 @@
+# Django
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store
+venv/
+# Editor directories
+.idea/
+.vscode/
