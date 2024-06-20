@@ -1,4 +1,3 @@
-# online_shop/settings.py
 from dotenv import load_dotenv
 import os
 
@@ -36,8 +35,13 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',  # Added
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',  # Added
+    'django.contrib.messages.middleware.MessageMiddleware',  # Added
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    # Other middleware
 ]
 
 ROOT_URLCONF = 'online_shop.urls'
@@ -101,8 +105,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-# online_shop/settings.py
-# ... existing settings ...
 # Configure static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 # Extra places for collectstatic to find static files
@@ -111,7 +113,6 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
