@@ -107,10 +107,11 @@ USE_TZ = True
 
 # Configure static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
-# Extra places for collectstatic to find static files
+# settings.py
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static'),
+    os.path.join(BASE_DIR, 'static'),  # Ensure this directory contains your static files
 ]
+
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
