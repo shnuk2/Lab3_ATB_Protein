@@ -41,8 +41,8 @@ jobs:
 
     - name: Run tests with Pytest
       run: |
-        python manage.py test shop.tests.test_models
-        python manage.py test shop.tests.test_views
+        python manage.py test shop.test.test_models
+        python manage.py test shop.test.test_views
 
   deploy:
     needs: build
